@@ -1,0 +1,75 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #FFF0F5;
+
+
+}
+
+.box {
+    background-color: #C71585;
+    color: white;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+
+}
+
+#element1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#element2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#element3 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#element4 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+/* start with @keyframe and then name your animation whatever you want */
+@keyframes spin {
+    /* from- is like a egining of what you want to do and to is end of how to end that.
+    example- start from right corner and end flying to left */
+    from {
+        transform: rotate(0deg)
+
+    }
+    to {
+        transform: rotate(360deg)
+
+    }
+
+}
+
+/* call the animation */
+#element5 {
+    /* liner finite is a type of animation, search for more types */
+    animation: spin .3s linear infinite;
+    animation-play-state: paused;
+}

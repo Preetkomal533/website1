@@ -1,0 +1,62 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: White;
+    height: 50vh;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    margin: 0;
+    color: Blue;
+}
+.bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 40vh;
+    position: absolute;
+    top: 200px;
+    right: 500px;
+    /* many filters that can help */
+    z-index: -1;
+    /* z index- if you have multiple element, you can decide which one you want in front and which one back
+    lower z index- behind, larger z-index- front */
+    mix-blend-mode:multiply;
+
+}
+
+
+.box {
+    display: flex;
+    height: 12vh;
+    width: 15vw;
+    margin: 30px;
+    color: Blue;
+    background-color: yellow;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    text-justify: center;
+    text-align: center;
+}
+
+
+#element1 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#element2 {
+    position: absolute;
+    bottom: 0px;
+    left: 250px;
+}
+

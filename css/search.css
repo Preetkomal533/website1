@@ -1,0 +1,61 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: linear-gradient(25deg, Pink, Purple); /* mix two color linear-gradient (angle, two color want to mix)*/
+    display: flex; /* uses flexbox which responds to different screen size (it will automcatically fit the screen of device*/
+    align-items: center; /* vertically center the item*/
+    justify-content: center; /* horizontally center*/
+    height: 100vh; /* vh- viewport height set the body height to 100%*/
+    margin: 0;
+}
+
+/*.search {
+    height: 300px;
+    width: 300px;
+    background-color: red
+}*/
+
+.search {
+    height: 50px;
+    position: relative;
+}
+
+.search .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    background-color: white;
+    border: 0;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+.search .input{
+    background-color: White;
+    border: 0;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    padding: 15px;
+    transition: width 0.5s ease;
+
+}
+
+.search .input:focus {
+  outline: none;
+
+}
+
+.search.active .input {
+    width: 280px;
+}
+
+.search.active .btn {
+    transform: translateX(198px);
+}

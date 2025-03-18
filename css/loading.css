@@ -1,0 +1,36 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    /* horizontally center */
+    justify-content: center;
+    /* vertically center */
+    margin: 0;
+}
+
+
+.bg {
+    background: url('../images/Image1.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    filter: blur(50px);
+    /* many filters that can help */
+    z-index: -1;
+    /* z index- if you have multiple element, you can decide which one you want in front and which one back
+    lower z index- behind, larger z-index- front */
+}
+
+.loading-text {
+    font-size: 50px;
+    color: black;
+
+}
