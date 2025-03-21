@@ -58,19 +58,27 @@ function createInsect() {
     insect.style.left = `${x}px`
 
     game_container.appendChild(insect)
+    catchInsect()
 
 }
 
 function catchInsect() {
     increaseScore()
     this.classList.add('caught')
+    setTimeout(() => this.remove(), 2000)
 
 }
 
-function increaseScore() {
+function increaseScore(){
     score = score + 1
     scoreEl.innerHTML = `Score: ${score}`
+    addinsects()
 
+}
+
+function addInsects() {
+    setTimeout(createInsect, 1000)
+    setTimeout(createInsect, 1500)
 }
 function getRandomLocation() {
 
