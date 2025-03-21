@@ -27,6 +27,8 @@ choose_insect_btns.forEach(btn => {
 
 })
 
+createInsect()
+createInsect()
 function startGame() {
     setInterval(increaseTime, 1000)
 }
@@ -59,6 +61,7 @@ function createInsect() {
     game_container.appendChild(insect)
     insect.addEventListener('click', () => {
         score = score + 1
+        scoreEl.innerHTML = "Score" `${score}`
     })
 }
 
