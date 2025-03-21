@@ -69,6 +69,6 @@ function getRandomLocation() {
     return {x, y}
 }
 
-insect.addEventListener('click', ()=> {
+score.addEventListener('click', ()=> {
     score = score + 1
 })
