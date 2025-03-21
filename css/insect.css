@@ -123,6 +123,10 @@ h1 {
     object-fit: contain;
 }
 
+.insect img {
+    width: 100px;
+    height: 100px;
+}
 
 .insect.caught {
     transform: scale(0);
