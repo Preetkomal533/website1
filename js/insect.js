@@ -59,12 +59,20 @@ function createInsect() {
     insect.style.left = `${x}px`
 
     game_container.appendChild(insect)
-    insect.addEventListener('click', () => {
-        score = score + 1
-        scoreEl.innerHTML = "Score" `${score}`
-    })
+
 }
 
+function catchInsect() {
+    increaseScore()
+    this.classList.add('caught')
+
+}
+
+function increaseScore() {
+    score = score + 1
+    scoreEl.innerHTML = `Score: ${score}`
+
+}
 function getRandomLocation() {
 
     const width = window.innerwidth
