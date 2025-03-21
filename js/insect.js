@@ -20,7 +20,7 @@ choose_insect_btns.forEach(btn => {
         const img = btn.querySelector('img')
         const src = img.getAttribute('src')
         const alt = img.getAttribute('alt')
-        selected_insects = {src, alt}
+        selected_insect = {src, alt}
         startGame()
         createInsect()
     })
@@ -60,6 +60,5 @@ function getRandomLocation() {
 
     const width = window.innerwidth
     const height = window.innerHeight
-    console.log(Math.random())
 
 }
