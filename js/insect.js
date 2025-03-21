@@ -69,3 +69,6 @@ function getRandomLocation() {
     return {x, y}
 }
 
+document.addEventListener('click', ()=> {
+    document.body.score = score + 1;
+})
