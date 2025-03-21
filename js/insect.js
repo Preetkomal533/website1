@@ -61,6 +61,8 @@ function getRandomLocation() {
     const width = window.innerwidth
     const height = window.innerHeight
     console.log(Math.Random())
-    const x = Math.Random() * 
+    const x = Math.Random() * width
+    const y = Math.Random() * height
+    return {x, y}
 }
 
