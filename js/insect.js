@@ -44,7 +44,6 @@ function increaseTime() {
     }
     timeEl.innerHTML = `Time: ${m}:${s}`
     seconds = seconds + 1;
-    getRandomLocation()
 
 }
 
