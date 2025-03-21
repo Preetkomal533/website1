@@ -66,13 +66,15 @@ function catchInsect() {
     increaseScore()
     this.classList.add('caught')
     setTimeout(() => this.remove(), 2000)
+    addInsects()
+
+
 
 }
 
 function increaseScore(){
     score = score + 1
     scoreEl.innerHTML = `Score: ${score}`
-    addinsects()
 
 }
 
