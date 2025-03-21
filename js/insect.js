@@ -52,6 +52,9 @@ function createInsect() {
     insect.classList.add('insect')
     insect.innerHTML = `<img src="${selected_insect.src}"
     alt = "${selected_insect.alt}" >`
+    const {x, y} = getRandomLocation()
+    insect.style.top =`${y}px`
+    insect.style.left = `${x}px`
 
     game_container.appendChild(insect)
 }
@@ -60,9 +63,9 @@ function getRandomLocation() {
 
     const width = window.innerwidth
     const height = window.innerHeight
-    console.log(Math.Random())
-    const x = Math.Random() * width
-    const y = Math.Random() * height
+    console.log(Math.random())
+    const x = Math.random() * width
+    const y = Math.random() * height
     return {x, y}
 }
 
