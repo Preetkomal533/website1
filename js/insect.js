@@ -16,16 +16,63 @@ start_btn.addEventListener('click', () => {
 
 choose_insect_btns.forEach(btn => {
     btn.addEventListener('click', () => {
-        screens[1].classList.add('up')
         const img = btn.querySelector('img')
         const src = img.getAttribute('src')
         const alt = img.getAttribute('alt')
+        screens[1].classList.add('up')
         selected_insect = {src, alt}
+        setTimeout(createInsect, 1000)
         startGame()
-        createInsect()
     })
 
 })
+
+function createInsect() {
+    const insect = document.createElement('div')
+    insect.classList.add('insect')
+    const { x, y } = getRandomLocation()
+    insect.style.top =`${y}px`
+    insect.style.left = `${x}px`
+    insect.innerHTML = `<img src= "${selected_insect.src}"
+    alt="${selected_insect.alt}" style = "transform: rotate(${Math.random() * 360}deg" />`
+
+    insect.addEventListener('click', catchInsect)
+    game_container.appendChild(insect)
+
+}
+
+function catchInsect() {
+    increaseScore()
+    this.classList.add('caught')
+    setTimeout(() => this.remove(), 2000)
+    addInsects()
+
+}
+
+function addInsects() {
+    setTimeout(createInsect, 1000)
+    setTimeout(createInsect, 1500)
+}
+
+
+function increaseScore() {
+    score ++
+    if (score > 19) {
+        message.classList.add('visible')
+    }
+    scoreEl.innerHTML = `Score: ${score}`
+}
+
+
+
+function getRandomLocation() {
+    const width = window.innerWidth
+    const height = window.innerHeight
+    const x = Math.random() * (width - 200) + 100
+    const y = Math.random() * (height - 200) + 100
+    return { x, y }
+}
+
 
 
 function startGame() {
@@ -47,46 +94,7 @@ function increaseTime() {
 }
 
 
-function createInsect() {
-    const insect = document.createElement('div')
-    insect.classList.add('insect')
-    insect.innerHTML = `<img src="${selected_insect.src}"
-    alt = "${selected_insect.alt}" >`
-    const {x, y} = getRandomLocation()
-    insect.style.top =`${y}px`
-    insect.style.left = `${x}px`
-
-    game_container.appendChild(insect)
-    catchInsect()
-
-}
-
-function catchInsect(event) {
-    let insect = event.target;
-    increaseScore()
-    this.classList.add('caught')
-    setTimeout( () => this.remove(), 2000)
-    addInsects()
-
-}
-
-function addInsects() {
-    setTimeout(createInsect, 1000)
-    setTimeout(createInsect, 1500)
-}
-function increaseScore() {
-    score += 1;
-    scoreEl.innerHTML = `Score: ${score}`;
-}
 
 
-function getRandomLocation() {
-
-    const width = window.innerWidth
-    const height = window.innerHeight
-    const x = Math.random() * (width - 200) + 100
-    const y = Math.random() * (height - 200) + 100
-    return {x, y}
-}
 
 
