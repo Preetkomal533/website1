@@ -63,18 +63,11 @@ function createInsect() {
 }
 
 function catchInsect() {
+    let insect = event.target;
     increaseScore()
     this.classList.add('caught')
-    setTimeout(() => this.remove(), 2000)
+    setTimeout( () => this.remove(), 2000)
     addInsects()
-
-
-
-}
-
-function increaseScore() {
-    score = score + 1
-    scoreEl.innerHTML = `Score: ${score}`
 
 }
 
@@ -86,7 +79,9 @@ function getRandomLocation() {
 
     const width = window.innerwidth
     const height = window.innerHeight
-    const x = Math.random() * width
-    const y = Math.random() * height
+    const x = Math.random() * (width - 200) + 100
+    const y = Math.random() * (height - 200) + 100
     return {x, y}
 }
+
+
