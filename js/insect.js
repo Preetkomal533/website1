@@ -74,6 +74,13 @@ function addInsects() {
     setTimeout(createInsect, 1000)
     setTimeout(createInsect, 1500)
 }
+
+function increaseScore() {
+    score += 1;
+    scoreEl.innerHTML = `Score: ${score}`;
+}
+
+
 function getRandomLocation() {
 
     const width = window.innerWidth
