@@ -61,7 +61,7 @@ function createInsect() {
 
 }
 
-function catchInsect(event) {
+function catchInsect() {
     let insect = event.target;
     increaseScore()
     this.classList.add('caught')
