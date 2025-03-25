@@ -1,0 +1,31 @@
+
+* {
+    box-sizing: border box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.heading {
+    color: black;
+}
+
+.heading h1 {
+    color: black;
+
+}
+
+.class {
+    left: 100%;
+    top: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 1;
+}
