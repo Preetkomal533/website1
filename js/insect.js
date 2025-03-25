@@ -1,5 +1,4 @@
 const screens = document.querySelectorAll('.screen')
-const start_btn = document.getElementById('start-btn')
 const choose_insect_btns = document.querySelectorAll('.choose-insect-btn')
 const game_container = document.getElementById('game-container')
 const timeEl = document.getElementById('time')
@@ -61,7 +60,7 @@ function createInsect() {
 
 }
 
-function catchInsect() {
+function catchInsect(event) {
     let insect = event.target;
     increaseScore()
     this.classList.add('caught')
@@ -74,7 +73,6 @@ function addInsects() {
     setTimeout(createInsect, 1000)
     setTimeout(createInsect, 1500)
 }
-
 function increaseScore() {
     score += 1;
     scoreEl.innerHTML = `Score: ${score}`;
