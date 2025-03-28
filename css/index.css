@@ -4,28 +4,133 @@
 }
 
 body {
+    color: black;
+    padding-bottom: 10px;
+}
+
+.container h1 {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+    font-size: 60px;
+    margin: 0px;
+
+}
+
+h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.container ul {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: white;
+    letter-spacing: 2px;
+    list-style-type: none;
+
 }
 
-.heading {
-    color: black;
+li {
+    margin: 15px;
+}
+
+
+/* .title1 {
+    position: relative;
+    top: 10px;
+    right: 358px;
+    padding: 0px;
+    margin: 0;
+
+}
+
+.title2 {
+    position: relative;
+    top: 50px;
+    right: 414px;
+    padding: 0px;
+    margin: 0;
+}
+
+.title3 {
+    position: relative;
+    top: 90px;
+    right: 460px;
+    padding: 0px;
+}
+
+.title4 {
+    position: relative;
+    top: 130px;
+    right: 496px;
+    padding: 0px;
+}
+
+.title5 {
+    position: relative;
+    top: 170px;
+    right: 597px;
+    padding: 0px;
+}
+
+.title6 {
+    position: relative;
+    top: 210px;
+    right: 665px;
+    padding: 0px;
+}
+
+.title7 {
+    position: relative;
+    top: 250px;
+    right: 715px;
+    padding: 0px;
+}
+
+.title8 {
+    position: relative;
+    top: 290px;
+    right: 804px;
+    padding: 0px;
 }
 
 .heading h1 {
-    color: black;
+    position: relative;
+    top: 10px;
+    right: -500px;
+    margin: 0px;
+    padding: 0px;
+} */
+
+
+.image1 {
+    position: relative;
+    display: absolute;
+    height: 150px;
+    top: -290px;
+    left: 35px;
 
 }
 
-.class {
-    left: 100%;
-    top: 100%;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    opacity: 1;
+.header h1 {
+    background: url('../images/Space1.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    color: white;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    z-index: -2px;
 }
