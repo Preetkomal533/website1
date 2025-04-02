@@ -1,8 +1,21 @@
 
- * {
+* {
     box-sizing: border-box;
- }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: green;
+}
 
 .container {
-    background-color: green;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    background-color: red;
+    height: 20vh;
+    width: 20vw;
+    justify-content: center;
+    align-items: center;
 }
