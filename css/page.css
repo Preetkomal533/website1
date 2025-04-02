@@ -1,0 +1,82 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: absolute;
+}
+
+
+.box {
+    display: block;
+    background: Lightgrey;
+    height: 50vh;
+    width: 90%;
+    margin: 50px;
+}
+img {
+    cursor: pointer;
+    position: relative;
+    height: 15vh;
+    width: 15vh;
+    top: 300px;
+    left: 480px;
+}
+
+#profile {
+    display: block;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+#profile h1 {
+    position: relative;
+    top: 350px;
+    left: 450px;
+}
+
+#profile h3 {
+    position: relative;
+    top: 350px;
+    left: 420px;
+
+}
+
+#bio {
+    display: block;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+}
+
+#bio h1 {
+    position: relative;
+    top: 350px;
+    left: 450px;
+}
+
+#bio h3 {
+    position: relative;
+    top: 350px;
+    left: 420px;
+
+}
+
+#work h1 {
+    position: relative;
+    top: 50px;
+    left: 10px;
+}
+
+.darkmode {
+    cursor: pointer;
+    position: relative;
+    top: 400px;
+    left: 500px;
+    background: black;
+    color: white;
+}

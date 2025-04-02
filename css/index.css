@@ -1,136 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
-    box-sizing: border box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    font-family: "Open Sans", sans-serif;
+    background-color: white;
     color: black;
-    padding-bottom: 10px;
 }
 
-.container h1 {
+.logo a {
     display: flex;
-    background-color: black;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px;
-    font-size: 60px;
-    margin: 0px;
+   color: black;
+   justify-content: center;
+   align-items: center;
+   margin: 0px;
+   padding: 0px;
 
-}
-
-h1 a {
-    text-decoration: none;
-    color: white;
 }
 
 .container ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 2px;
     list-style-type: none;
-
+    padding: 20px;
+    background-color: blue;
+    text-align: center;
+    margin-top: 0;
 }
 
-li {
-    margin: 15px;
+.container ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-
-/* .title1 {
-    position: relative;
-    top: 10px;
-    right: 358px;
-    padding: 0px;
-    margin: 0;
-
+.container ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
 
-.title2 {
-    position: relative;
-    top: 50px;
-    right: 414px;
-    padding: 0px;
-    margin: 0;
+.container ul li a:hover {
+    color: red;
 }
 
-.title3 {
-    position: relative;
-    top: 90px;
-    right: 460px;
-    padding: 0px;
-}
-
-.title4 {
-    position: relative;
-    top: 130px;
-    right: 496px;
-    padding: 0px;
-}
-
-.title5 {
-    position: relative;
-    top: 170px;
-    right: 597px;
-    padding: 0px;
-}
-
-.title6 {
-    position: relative;
-    top: 210px;
-    right: 665px;
-    padding: 0px;
-}
-
-.title7 {
-    position: relative;
-    top: 250px;
-    right: 715px;
-    padding: 0px;
-}
-
-.title8 {
-    position: relative;
-    top: 290px;
-    right: 804px;
-    padding: 0px;
+.header {
+    text-align: center;
+    margin-top: 50px;
 }
 
 .heading h1 {
-    position: relative;
-    top: 10px;
-    right: -500px;
-    margin: 0px;
-    padding: 0px;
-} */
-
-
-.image1 {
-    position: relative;
-    display: absolute;
-    height: 150px;
-    top: -290px;
-    left: 35px;
-
+    font-size: 2.5em;
+    color: black;
 }
 
-.header h1 {
-    background: url('../images/Space1.avif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    display: flex;
+.heading h3 {
+    font-size: 20px;
+    color: black;
+}
+
+.image1 {
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+}
+
+#darkMode {
+    padding: 10px 20px;
+    background-color: blue;
+    border: none;
     color: white;
-    font-size: 100px;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    z-index: -2px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+}
+
+#darkMode:hover {
+    background-color: blue;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.home-link {
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+
+.home-link:hover {
+    color: black;
 }

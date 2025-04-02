@@ -1,0 +1,7 @@
+<!--to make a respirototry
+cd .. then mkdir (name of website) and then cd(name of the website) then code index.html and on that page press !tab.
+can use http-server to see the changes made in your website
+ first page should always be named as index.html otherwise it won't work
+ if want to go back to previous prj=oject just enter ls and then choose the number related to your codespace
+ to stop server ctrl c--
+ Pass- [Name]@123>
