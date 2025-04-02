@@ -9,7 +9,7 @@ body {
     background-color: green;
 }
 
-.container1 {
+.face {
     position: relative;
     top: 160px;
     left: 450px;
@@ -21,7 +21,7 @@ body {
     border-radius: 100%;
 }
 
-.container2 {
+.eyeL {
     position: relative;
     height: 20vh;
     width: 9vw;
@@ -31,7 +31,7 @@ body {
     background-color: white;
 }
 
-.container3 {
+.eyeR {
     position: relative;
     height: 20vh;
     width: 9vw;
@@ -41,7 +41,7 @@ body {
     background-color: white;
 }
 
-.containerA {
+.pupil1 {
     position: relative;
     height: 8vh;
     width: 3vw;
@@ -52,7 +52,7 @@ body {
 
 }
 
-.containerB {
+.pupil2 {
     position: relative;
     height: 8vh;
     width: 3vw;
@@ -62,7 +62,7 @@ body {
     background-color: black;
 }
 
-.container4 {
+.nose {
     position: relative;
     height: 20vh;
     width: 8vw;
@@ -73,7 +73,7 @@ body {
 
 }
 
-.container5 {
+.earL {
         position: relative;
         height: 40vh;
         width: 20vw;
@@ -85,7 +85,7 @@ body {
 
 }
 
-.container6 {
+.earR {
     position: relative;
     height: 40vh;
     width: 20vw;
