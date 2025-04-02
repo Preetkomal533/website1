@@ -23,8 +23,6 @@ body {
 }
 
 .container ul {
-    content: '';
-    display: absolute;
     list-style-type: none;
     padding: 20px;
     background-color: blue;
