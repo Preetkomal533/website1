@@ -9,7 +9,7 @@ body {
     background-color: green;
 }
 
-.container {
+.container1 {
     position: relative;
     top: 160px;
     left: 450px;
@@ -19,4 +19,35 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+}
+
+.container2 {
+    position: relative;
+    height: 20vh;
+    width: 9vw;
+    top: 100px;
+    left: 80px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.container3 {
+    position: relative;
+    height: 20vh;
+    width: 9vw;
+    top: -25px;
+    left: 200px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.containerA {
+    position: relative;
+    height: 4vh;
+    width: 2vw;
+    top: 50px;
+    left: 80px;
+    border-radius: 100%;
+    background-color: black;
+
 }
