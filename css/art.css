@@ -43,11 +43,59 @@ body {
 
 .containerA {
     position: relative;
-    height: 4vh;
-    width: 2vw;
-    top: 50px;
-    left: 80px;
+    height: 8vh;
+    width: 3vw;
+    top: 40px;
+    left: 50px;
     border-radius: 100%;
     background-color: black;
 
 }
+
+.containerB {
+    position: relative;
+    height: 8vh;
+    width: 3vw;
+    top: 40px;
+    left: 30px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.container4 {
+    position: relative;
+    height: 20vh;
+    width: 8vw;
+    top: -55px;
+    left: 150px;
+    border-radius: 45%;
+    background-color: orange;
+
+}
+
+.container5 {
+        position: relative;
+        height: 40vh;
+        width: 20vw;
+        top: -230px;
+        left: 380px;
+        border-radius: 100%;
+        background-color: white;
+        z-index: -2;
+
+}
+
+.container6 {
+    position: relative;
+    height: 40vh;
+    width: 20vw;
+    top: -480px;
+    left: 670px;
+    border-radius: 100%;
+    background-color: white;
+    z-index: -2;
+
+}
+
+
+
