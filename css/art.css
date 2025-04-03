@@ -13,7 +13,7 @@ body {
 .face {
     position: relative;
     top: 160px;
-    left: 450px;
+    left: 500px;
     background-color: Lightgray;
     height: 60vh;
     width: 30vw;
@@ -36,7 +36,7 @@ body {
     position: relative;
     height: 20vh;
     width: 9vw;
-    top: -25px;
+    top: -70px;
     left: 200px;
     border-radius: 100%;
     background-color: white;
@@ -46,7 +46,7 @@ body {
     position: relative;
     height: 8vh;
     width: 3vw;
-    top: 40px;
+    top: 70px;
     left: 50px;
     border-radius: 100%;
     background-color: black;
@@ -57,8 +57,8 @@ body {
     position: relative;
     height: 8vh;
     width: 3vw;
-    top: 40px;
-    left: 30px;
+    top: 70px;
+    left: 40px;
     border-radius: 100%;
     background-color: black;
 }
@@ -67,7 +67,7 @@ body {
     position: relative;
     height: 20vh;
     width: 8vw;
-    top: -55px;
+    top: -100px;
     left: 150px;
     border-radius: 45%;
     background-color: orange;
@@ -78,8 +78,8 @@ body {
         position: relative;
         height: 40vh;
         width: 20vw;
-        top: -230px;
-        left: 380px;
+        top: 120px;
+        left: 280px;
         border-radius: 100%;
         background-color: white;
         z-index: -2;
@@ -90,8 +90,8 @@ body {
     position: relative;
     height: 40vh;
     width: 20vw;
-    top: -480px;
-    left: 670px;
+    top: 120px;
+    left: -300px;
     border-radius: 100%;
     background-color: white;
     z-index: -2;
