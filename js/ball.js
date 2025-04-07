@@ -1,4 +1,5 @@
 const ball = document.createElement('div')
+const paddle = document.createElement('div')
 const ballRadius = 45
 // calculate width of window height on different devices
 const windowHeight = window.innerHeight
@@ -36,6 +37,15 @@ function createBall(){
     ball.style.top = `${windowHeight/2 - ballRadius}px`
     ball.style.left = `${ballXPosition}px`
     ball.style.innerHtml.backgroundColor = "blue"
+}
+
+createPaddle()
+function createPaddle(){
+    document.body.appendChild(paddle)
+    paddle.style.height = "20px"
+    paddle.style.width = "20px"
+    paddle.style.backgroundColor = "blue"
+    paddle.style.position = "absolute"
 }
 
 
