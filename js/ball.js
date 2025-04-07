@@ -3,8 +3,8 @@ document.body.appendChild(ball)
 
 const LPadel = document.createElement('div')
 document.body.appendChild(LPadel)
-let LPadelWidth = 200
-let LPadelHeight = 100
+let LPadelWidth = 20
+let LPadelHeight = 200
 
 const ballRadius = 45
 // calculate width of window height on different devices
@@ -41,7 +41,6 @@ function createBall(){
     ball.style.position = "absolute"
     ball.style.top = `${windowHeight/2 - ballRadius}px`
     ball.style.left = `${ballXPosition}px`
-    ball.style.innerHtml.backgroundColor = "blue"
 }
 
 createLPadel()
@@ -56,7 +55,7 @@ function createLPadel() {
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
-        //move up
+        
     }
     if (event.key == 's') {
         //move down
