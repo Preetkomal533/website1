@@ -34,6 +34,9 @@ function moveBall() {
     if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius){
         ballYDirection = ballYDirection * -1
     }
+    //if the top of the ball is less than or equal to the top of the padel and bottom of the ball is
+    //greater than or equal to the bottom of the padel and left side of the ball is less than or equal to
+    // rigth side of padel, then change ball's direction
 
 }
 
@@ -61,10 +64,22 @@ function createLPadel() {
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
-        LPadelYPosition = LPadelYPosition - LPadelSpeed
+        if (LPadelYPosition <= 0) {
+            LPadelYPosition = 0
+        }
+        else {
+            LPadelYPosition = LPadelYPosition - LPadelSpeed
+
+        }
         }
     if (event.key == 's') {
-        LPadelYPosition = LPadelYPosition + LPadelSpeed
+        if (LPadelYPosition >= windowHeight - LPadelHeight){
+            LPadelYPosition = windowHeight - LPadelHeight
+        }
+        else {
+            LPadelYPosition = LPadelYPosition + LPadelSpeed
+
+        }
         }
         LPadel.style.top = `${LPadelYPosition}px`
 })
