@@ -1,3 +1,6 @@
+const windowHeight = window.innerHeight
+const windowWidth = window.innerWidth
+
 const ball = document.createElement('div')
 document.body.appendChild(ball)
 
@@ -5,13 +8,14 @@ const LPadel = document.createElement('div')
 document.body.appendChild(LPadel)
 let LPadelWidth = 20
 let LPadelHeight = 200
-let LPadelSpeed = 8
-letLPadelYPosition = 
+let LPadelSpeed = 100
+let LPadelYPosition = windowHeight / 2 - LPadelHeight / 2
+
+
 
 const ballRadius = 45
 // calculate width of window height on different devices
-const windowHeight = window.innerHeight
-const windowWidth = window.innerWidth
+
 let ballXPosition = windowWidth/2 - ballRadius
 let ballSpeed = 8
 let ballXDirection = 1
