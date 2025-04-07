@@ -54,5 +54,12 @@ function createLPadel() {
     LPadel.style.top = `${windowHeight / 2 - LPadelHeight / 2}px`
 }
 
-LPadel.addEventListener('')
+document.addEventListener('keyup', (event) => {
+    if (event.key == 'w') {
+        //move up
+    }
+    if (event.key == 's') {
+        //move down
+    }
+})
 
