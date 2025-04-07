@@ -1,5 +1,11 @@
 const ball = document.createElement('div')
-const paddle = document.createElement('div')
+document.body.appendChild(ball)
+
+const Padel = document.createElement('div')
+document.body.appendChild(Padel)
+let PadelWidth = 20
+let PadelHeight = 100
+
 const ballRadius = 45
 // calculate width of window height on different devices
 const windowHeight = window.innerHeight
@@ -28,7 +34,6 @@ function moveBall() {
 createBall()
 function createBall(){
     // parent in append mean outside and child mean inside the body
-    document.body.appendChild(ball)
     ball.style.height = `${2 * ballRadius}px`
     ball.style.width = `${2 * ballRadius}px`
     ball.style.borderRadius = "50%"
@@ -39,13 +44,14 @@ function createBall(){
     ball.style.innerHtml.backgroundColor = "blue"
 }
 
-createPaddle()
-function createPaddle(){
-    document.body.appendChild(paddle)
-    paddle.style.height = "20px"
-    paddle.style.width = "20px"
-    paddle.style.backgroundColor = "blue"
-    paddle.style.position = "absolute"
+createPadel()
+function createPadel() {
+    document.body.appendChild(Padel)
+    Padel.style.height = `${PadelWidth}px`
+    Padel.style.width = `${PadelHeight}px`
+    Padel.style.backgroundColor = "blue"
+    Padel.style.position = "absolute"
+    Padel.style.left = "100%"
 }
 
 
