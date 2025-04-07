@@ -45,13 +45,13 @@ function createBall(){
 }
 
 createPadel()
-function createPadel() {
-    document.body.appendChild(Padel)
-    Padel.style.height = `${PadelWidth}px`
-    Padel.style.width = `${PadelHeight}px`
+function createPadel(){
+    Padel.style.width = `${PadelWidth}px`
+    Padel.style.height = `${PadelHeight}px`
     Padel.style.backgroundColor = "blue"
     Padel.style.position = "absolute"
-    Padel.style.left = "100%"
+    Padel.style.left = "50%"
+    Padel.style.top = "20px"
 }
 
 
