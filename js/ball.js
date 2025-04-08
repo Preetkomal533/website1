@@ -1,28 +1,33 @@
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
-const ball = document.createElement('div')
-document.body.appendChild(ball)
-
 const LPadel = document.createElement('div')
 document.body.appendChild(LPadel)
-let LPadelWidth = 20
-let LPadelHeight = 200
-let LPadelSpeed = 100
+let LPadelWidth = 10
+let LPadelHeight = 150
+let LPadelSpeed = 10
 let LPadelYPosition = windowHeight / 2 - LPadelHeight / 2
+let LPadelXPosition = 70
 
 
-
-const ballRadius = 45
-// calculate width of window height on different devices
-
+const ball = document.createElement('div')
+document.body.appendChild(ball)
+const ballRadius = 20
 let ballXPosition = windowWidth/2 - ballRadius
-let ballSpeed = 8
+let ballSpeed = 5
 let ballXDirection = 1
 let ballYPosition = windowHeight/2 - ballRadius
 let ballYDirection = 1
 
-setInterval(moveBall, 10)
+const score = document.createElement('div')
+document.body.appendChild(score)
+ //dsiplay score and increase score when ball hits padel
+let level = 1 //dsiplay level and increase the level by 1 evrytime the score increase by 10
+//as level increase, increase ballspeed
+//if ball pas padel, stop or disapper the ball and let the user know game is over
+//optional sound effect when ball hits padel
+//background music
+
 function moveBall() {
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
     ball.style.left = `${ballXPosition}px`
@@ -34,9 +39,22 @@ function moveBall() {
     if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius){
         ballYDirection = ballYDirection * -1
     }
-    //if the top of the ball is less than or equal to the top of the padel and bottom of the ball is
-    //greater than or equal to the bottom of the padel and left side of the ball is less than or equal to
-    // rigth side of padel, then change ball's direction
+
+    let ballTop = ballYPosition
+    let ballBottom = ballYPosition + 2 * ballRadius
+    let ballLeft = ballXPosition
+    let LPadelTop = LPadelYPosition
+    let LPadelRight = LPadelXPosition + LPadelWidth
+    let LPadelBottom = LPadelYPosition + LPadelHeight
+
+    if(
+        (ballBottom >= LPadelTop) &&
+        (ballTop <= LPadelBottom) &&
+        (ballLeft <= LPadelRight) &&
+        (ballXDirection == -1)
+    ){
+        ballXDirection = ballXDirection * -1
+    }
 
 }
 
@@ -62,6 +80,37 @@ function createLPadel() {
     LPadel.style.top = `${windowHeight / 2 - LPadelHeight / 2}px`
 }
 
+wkey = false
+skey = false
+document.addEventListener('keydown', (event) => {
+    if (event.key == 'w') {
+        wkey = true
+    }
+    if (event.key == 's') {
+        skey = true
+    }
+})
+
+document.addEventListener('keyup', (event) => {
+    if (event.key == 'w'){
+        wkey = false
+    }
+    if (event.key == 's'){
+        skey = false
+    }
+})
+
+function moveLPadel() {
+    if (wkey == true && LPadelYPosition > 0) {
+        LPadelYPosition = LPadelYPosition - LPadelSpeed
+    }
+    if (skey == true && LPadelYPosition < windowHeight - LPadelHeight) {
+        LPadelYPosition = LPadelYPosition + LPadelSpeed
+    }
+    LPadel.style.top = `${LPadelYPosition}px`
+}
+
+
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
         if (LPadelYPosition <= 0) {
@@ -84,3 +133,24 @@ document.addEventListener('keyup', (event) => {
         LPadel.style.top = `${LPadelYPosition}px`
 })
 
+function animate() {
+    moveBall()
+    moveLPadel()
+    requestAnimationFrame(animate)
+}
+animate()
+
+createScore()
+function createScore() {
+    score.style.width = "100px"
+    score.style.height = "50px"
+    score.style.backgroundColor = "gray"
+    score.style.borderRadius = "10px"
+    score.style.position = "absolute"
+    score.style.left = "50px"
+    score.innerHTML = "Score"
+    score.style.color = "black"
+    score.style.fontSize = "30px"
+    score.style.textAlign = "center"
+    score.style.justifyContent = "center"
+}
