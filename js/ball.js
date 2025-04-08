@@ -21,6 +21,7 @@ let ballYDirection = 1
 
 const score = document.createElement('div')
 document.body.appendChild(score)
+let score1 = 0
  //dsiplay score and increase score when ball hits padel
 let level = 1 //dsiplay level and increase the level by 1 evrytime the score increase by 10
 //as level increase, increase ballspeed
@@ -142,13 +143,13 @@ animate()
 
 createScore()
 function createScore() {
-    score.style.width = "100px"
+    score.style.width = "150px"
     score.style.height = "50px"
     score.style.backgroundColor = "gray"
     score.style.borderRadius = "10px"
     score.style.position = "absolute"
-    score.style.left = "50px"
-    score.innerHTML = "Score"
+    score.style.left = "1200px"
+    score.innerHTML = `Score: ${score1}`
     score.style.color = "black"
     score.style.fontSize = "30px"
     score.style.textAlign = "center"
