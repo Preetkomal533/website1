@@ -180,6 +180,14 @@ function createLevel() {
     level.style.justifyContent = "center"
 }
 
+function changeLevel(){
+    if(score1 % 10 == 0){
+        level++
+        createLevel
+        level.innerHTML = `Score: ${level1}`
+
+    }
+}
 
 
 
