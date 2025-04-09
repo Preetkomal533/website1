@@ -59,6 +59,7 @@ function moveBall() {
         (ballXDirection == -1)
     ){
         ballXDirection = ballXDirection * -1
+        score1 ++
 
     }
 
@@ -169,13 +170,14 @@ function createLevel() {
     level.style.backgroundColor = "gray"
     level.style.borderRadius = "10px"
     level.style.position = "absolute"
-    level.style.left = "10px"
+    level.style.left = "1000px"
     level.innerHTML = `Level: ${level1}`
     level.style.color = "black"
     level.style.fontSize = "30px"
     level.style.textAlign = "center"
     levle.style.justifyContent = "center"
 }
+
 
 
 
