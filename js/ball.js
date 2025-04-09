@@ -57,7 +57,6 @@ function moveBall() {
         (ballXDirection == -1)
     ){
         ballXDirection = ballXDirection * -1
-        increaseScore()
 
     }
 
