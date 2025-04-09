@@ -57,7 +57,9 @@ function moveBall() {
         (ballXDirection == -1)
     ){
         ballXDirection = ballXDirection * -1
-        score1 = score1 + 1
+        score1 ++
+        updateScoreDisplay()
+
     }
 
 }
@@ -159,6 +161,11 @@ function createScore() {
     score.style.justifyContent = "center"
 
 }
+
+function updateScoreDisplay() {
+    scoreDisplay.textContent = `Score: ${score1}`
+}
+
 
 
 
