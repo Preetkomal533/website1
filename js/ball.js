@@ -57,7 +57,7 @@ function moveBall() {
         (ballXDirection == -1)
     ){
         ballXDirection = ballXDirection * -1
-
+        score1 = score1 + 1
     }
 
 }
@@ -157,14 +157,9 @@ function createScore() {
     score.style.fontSize = "30px"
     score.style.textAlign = "center"
     score.style.justifyContent = "center"
-    let ballTop = ballYPosition
-    let ballBottom = ballYPosition + 2 * ballRadius
-    let ballLeft = ballXPosition
-    let LPadelTop = LPadelYPosition
-    let LPadelRight = LPadelXPosition + LPadelWidth
-    let LPadelBottom = LPadelYPosition + LPadelHeight
 
 }
+
 
 
 
