@@ -57,8 +57,6 @@ function moveBall() {
         (ballXDirection == -1)
     ){
         ballXDirection = ballXDirection * -1
-        score1 ++
-        updateScoreDisplay()
 
     }
 
@@ -162,9 +160,23 @@ function createScore() {
 
 }
 
-function updateScoreDisplay() {
-    scoreDisplay.textContent = `Score: ${score1}`
+createLevel()
+function createLevel() {
+    level.style.width = "150px"
+    level.style.height = "50px"
+    level.style.backgroundColor = "gray"
+    level.style.borderRadius = "10px"
+    level.style.position = "absolute"
+    level.style.left = "100px"
+    level.innerHTML = `Level: ${level}`
+    level.style.color = "black"
+    level.style.fontSize = "30px"
+    level.style.textAlign = "center"
+    levle.style.justifyContent = "center"
+
 }
+
+
 
 
 
