@@ -178,11 +178,6 @@ function createLevel() {
     levle.style.justifyContent = "center"
 }
 
-function changeLevel() {
-    if(score1 => 10){
-        level1 ++
-    }
-}
 
 
 
