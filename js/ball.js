@@ -23,7 +23,9 @@ const score = document.createElement('div')
 document.body.appendChild(score)
 let score1 = 0
  //dsiplay score and increase score when ball hits padel
-let level = 1 //dsiplay level and increase the level by 1 evrytime the score increase by 10
+const level = document.createElement('div')
+document.body.appendChild(level)
+let level1 = 1 //dsiplay level and increase the level by 1 evrytime the score increase by 10
 //as level increase, increase ballspeed
 //if ball pas padel, stop or disapper the ball and let the user know game is over
 //optional sound effect when ball hits padel
@@ -167,13 +169,12 @@ function createLevel() {
     level.style.backgroundColor = "gray"
     level.style.borderRadius = "10px"
     level.style.position = "absolute"
-    level.style.left = "100px"
-    level.innerHTML = `Level: ${level}`
+    level.style.left = "10px"
+    level.innerHTML = `Level: ${level1}`
     level.style.color = "black"
     level.style.fontSize = "30px"
     level.style.textAlign = "center"
     levle.style.justifyContent = "center"
-
 }
 
 
