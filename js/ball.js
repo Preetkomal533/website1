@@ -29,6 +29,23 @@ let level = 1 //dsiplay level and increase the level by 1 evrytime the score inc
 //optional sound effect when ball hits padel
 //background music
 
+
+createScore()
+function createScore() {
+    score.style.width = "150px"
+    score.style.height = "50px"
+    score.style.backgroundColor = "gray"
+    score.style.borderRadius = "10px"
+    score.style.position = "absolute"
+    score.style.left = "1200px"
+    score.innerHTML = `Score: ${score1}`
+    score.style.color = "black"
+    score.style.fontSize = "30px"
+    score.style.textAlign = "center"
+    score.style.justifyContent = "center"
+}
+
+
 function moveBall() {
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
     ball.style.left = `${ballXPosition}px`
@@ -55,6 +72,7 @@ function moveBall() {
         (ballXDirection == -1)
     ){
         ballXDirection = ballXDirection * -1
+        score1 = score1 + 1
     }
 
 }
@@ -141,17 +159,7 @@ function animate() {
 }
 animate()
 
-createScore()
-function createScore() {
-    score.style.width = "150px"
-    score.style.height = "50px"
-    score.style.backgroundColor = "gray"
-    score.style.borderRadius = "10px"
-    score.style.position = "absolute"
-    score.style.left = "1200px"
-    score.innerHTML = `Score: ${score1}`
-    score.style.color = "black"
-    score.style.fontSize = "30px"
-    score.style.textAlign = "center"
-    score.style.justifyContent = "center"
-}
+
+
+
+
