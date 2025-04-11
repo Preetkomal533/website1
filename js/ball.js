@@ -26,9 +26,6 @@ let score1 = 8
 const level = document.createElement('div')
 document.body.appendChild(level)
 let level1 = 1
-//if ball pas padel, stop or disapper the ball and let the user know game is over
-//optional sound effect when ball hits padel
-//background music
 
 
 function moveBall() {
@@ -66,8 +63,7 @@ function moveBall() {
         }
 
     } else if (ballLeft <= 0) {
-        // Game over condition
-        cancelAnimationFrame(animationId) // Stop the game
+        cancelAnimationFrame(animationId)
         ball.style.display = "none"
     }
 }
