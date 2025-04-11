@@ -21,7 +21,7 @@ let ballYDirection = 1
 
 const score = document.createElement('div')
 document.body.appendChild(score)
-let score1 = 0
+let score1 = 8
  //dsiplay score and increase score when ball hits padel
 const level = document.createElement('div')
 document.body.appendChild(level)
@@ -61,7 +61,10 @@ function moveBall() {
         ballXDirection = ballXDirection * -1
         score1++
         score.innerHTML = `Score: ${score1}`
-
+        if(`${score1}` % 10 == 0) {
+            level++
+            level.innerHTML = `Level: ${level1}`
+        }
 
     }
 
@@ -180,14 +183,6 @@ function createLevel() {
     level.style.justifyContent = "center"
 }
 
-function changeLevel(){
-    if(score1 % 10 == 0){
-        level++
-        createLevel
-        level.innerHTML = `Score: ${level1}`
-
-    }
-}
 
 
 
