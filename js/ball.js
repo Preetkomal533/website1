@@ -21,7 +21,7 @@ let ballYDirection = 1
 
 const score = document.createElement('div')
 document.body.appendChild(score)
-let score1 = 8
+let score1 = 0
  //dsiplay score and increase score when ball hits padel
 const level = document.createElement('div')
 document.body.appendChild(level)
