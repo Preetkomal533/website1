@@ -28,6 +28,24 @@ document.body.appendChild(level)
 let level1 = 1
 
 
+function GameOver(){
+    const over = document.createElement('div')
+    document.body.appendChild(over)
+    over.style.height = "100px"
+    over.style.width = "500px"
+    over.style.borderRadius = "20px"
+    over.style.backgroundColor = "black"
+    over.style.position = "relative"
+    over.style.left = "420px"
+    over.style.top = "200px"
+    over.innerHTML = "Game Over!!"
+    over.style.color = "white"
+    over.style.fontSize = "60px"
+    over.style.display = "flex"
+    over.style.justifyContent = "center"
+    over.style.alignItems =  "center"
+}
+
 function moveBall() {
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
     ball.style.left = `${ballXPosition}px`
@@ -63,8 +81,10 @@ function moveBall() {
         }
 
     } else if (ballLeft <= 0) {
+        GameOver()
         cancelAnimationFrame(animationId)
         ball.style.display = "none"
+
     }
 }
 
@@ -180,3 +200,5 @@ function createLevel() {
     level.style.textAlign = "center"
     level.style.justifyContent = "center"
 }
+
+
