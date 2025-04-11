@@ -27,6 +27,10 @@ const level = document.createElement('div')
 document.body.appendChild(level)
 let level1 = 1
 
+const bodyElement = document.body;
+const bodyHTML = bodyElement.innerHTML;
+bodyElement.style.backgroundColor = 'lightblue';
+
 
 function GameOver(){
     const over = document.createElement('div')
@@ -200,5 +204,6 @@ function createLevel() {
     level.style.textAlign = "center"
     level.style.justifyContent = "center"
 }
+
 
 
