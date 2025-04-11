@@ -31,8 +31,6 @@ let level1 = 1
 //background music
 
 
-
-
 function moveBall() {
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
     ball.style.left = `${ballXPosition}px`
@@ -59,16 +57,18 @@ function moveBall() {
         (ballXDirection == -1)
     ){
         ballXDirection = ballXDirection * -1
-        audio.play()
         score1++
         score.innerHTML = `Score: ${score1}`
         if(`${score1}` % 10 == 0) {
             level1++
             level.innerHTML = `Level: ${level1}`
-            ballSpeed = ballSpeed + 3
+            ballSpeed = ballSpeed + 2
         }
 
     }
+    else(
+        
+    )
 
 }
 
