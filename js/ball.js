@@ -14,7 +14,7 @@ const ball = document.createElement('div')
 document.body.appendChild(ball)
 const ballRadius = 20
 let ballXPosition = windowWidth/2 - ballRadius
-let ballSpeed = 5
+let ballSpeed = 20
 let ballXDirection = 1
 let ballYPosition = windowHeight/2 - ballRadius
 let ballYDirection = 1
