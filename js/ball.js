@@ -25,10 +25,11 @@ let score1 = 8
  //dsiplay score and increase score when ball hits padel
 const level = document.createElement('div')
 document.body.appendChild(level)
-let level1 = 1 
+let level1 = 1
 //if ball pas padel, stop or disapper the ball and let the user know game is over
 //optional sound effect when ball hits padel
 //background music
+
 
 
 
@@ -58,6 +59,7 @@ function moveBall() {
         (ballXDirection == -1)
     ){
         ballXDirection = ballXDirection * -1
+        audio.play()
         score1++
         score.innerHTML = `Score: ${score1}`
         if(`${score1}` % 10 == 0) {
