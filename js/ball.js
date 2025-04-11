@@ -14,7 +14,7 @@ const ball = document.createElement('div')
 document.body.appendChild(ball)
 const ballRadius = 20
 let ballXPosition = windowWidth/2 - ballRadius
-let ballSpeed = 20
+let ballSpeed = 5
 let ballXDirection = 1
 let ballYPosition = windowHeight/2 - ballRadius
 let ballYDirection = 1
@@ -25,8 +25,7 @@ let score1 = 8
  //dsiplay score and increase score when ball hits padel
 const level = document.createElement('div')
 document.body.appendChild(level)
-let level1 = 1 //dsiplay level and increase the level by 1 evrytime the score increase by 10
-//as level increase, increase ballspeed
+let level1 = 1 
 //if ball pas padel, stop or disapper the ball and let the user know game is over
 //optional sound effect when ball hits padel
 //background music
@@ -62,8 +61,9 @@ function moveBall() {
         score1++
         score.innerHTML = `Score: ${score1}`
         if(`${score1}` % 10 == 0) {
-            level++
+            level1++
             level.innerHTML = `Level: ${level1}`
+            ballSpeed = ballSpeed + 3
         }
 
     }
