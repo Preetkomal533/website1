@@ -65,11 +65,11 @@ function moveBall() {
             ballSpeed = ballSpeed + 2
         }
 
+    } else if (ballLeft <= 0) {
+        // Game over condition
+        cancelAnimationFrame(animationId) // Stop the game
+        ball.style.display = "none"
     }
-    else(
-        
-    )
-
 }
 
 createBall()
@@ -184,12 +184,3 @@ function createLevel() {
     level.style.textAlign = "center"
     level.style.justifyContent = "center"
 }
-
-
-
-
-
-
-
-
-
