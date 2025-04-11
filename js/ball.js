@@ -14,7 +14,7 @@ const ball = document.createElement('div')
 document.body.appendChild(ball)
 const ballRadius = 20
 let ballXPosition = windowWidth/2 - ballRadius
-let ballSpeed = 5
+let ballSpeed = 6
 let ballXDirection = 1
 let ballYPosition = windowHeight/2 - ballRadius
 let ballYDirection = 1
@@ -56,7 +56,7 @@ function moveBall() {
         ballXDirection = ballXDirection * -1
         score1++
         score.innerHTML = `Score: ${score1}`
-        if(`${score1}` % 10 == 0) {
+        if(`${score1}` % 5 == 0) {
             level1++
             level.innerHTML = `Level: ${level1}`
             ballSpeed = ballSpeed + 2
